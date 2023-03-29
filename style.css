@@ -1,11 +1,12 @@
 
 		body {
-			font-family: 'Baloo Da', sans-serif;
+			font-family: 'Baloo Da 2', cursive;
 		}
 	
-#text, div {
-  font-size: 26px;
-  color: #333;
-  background-color: #f1f1f1;
-  padding: 10px;
+#text {
+‌	font-family: 'Baloo Da 2', cursive;
+ 	font-size: 26px;
+	color: red;
+ 	background-color: #f1f1f1;
+	padding: 10px;
 }
