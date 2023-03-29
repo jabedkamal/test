@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+</head>
+<body>
+	<div id="text"></div>
+	<script>
+		fetch('1.txt')
+		  .then(response => response.text())
+		  .then(data => {
+		    document.getElementById('text').innerHTML = data;
+		  });
+	</script>
+</body>
+</html>
