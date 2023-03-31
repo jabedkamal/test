@@ -11,6 +11,28 @@
 
 <body>
 	<div id="text1"></div>
+<ul>
+  <?php
+    // Define the path to your post folder
+    $post_folder = 'posts/';
+
+    // Get a list of all the post files in the folder
+    $post_files = glob($post_folder . '*.txt');
+
+    // Sort the post files by modification time (newest first)
+    array_multisort(array_map('filemtime', $post_files), SORT_DESC, $post_files);
+
+    // Display the 5 most recent posts
+    for ($i = 0; $i < 5 && $i < count($post_files); $i++) {
+      $post_content = file_get_contents($post_files[$i]);
+      $post_title = basename($post_files[$i], '.txt');
+
+      // Output the post title and a link to the post file
+      echo "<li><a href=\"$post_files[$i]\">$post_title</a></li>";
+    }
+  ?>
+</ul>
+
 	
 </body>
 </html>
